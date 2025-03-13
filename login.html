@@ -68,13 +68,14 @@
 
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent form submission
+            event.preventDefault(); // Stop the form from submitting traditionally
+            
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
 
-            if (email && password) {  
-                // Redirect to redeem.html
-                window.location.href = "redeem.html";
+            if (email && password) {
+                // Redirect to redeem.html with query parameters (optional)
+                window.location.href = "redeem.html?email=" + encodeURIComponent(email);
             } else {
                 alert("Please enter valid credentials.");
             }
