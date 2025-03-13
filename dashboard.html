@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Dashboard Options */
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: nowrap; /* Prevents wrapping */
+            overflow-x: auto; /* Enables horizontal scrolling if needed */
+        }
+
+        .option-box {
+            width: 48%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .option-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .option-box img {
+            width: 100%;
+            height: 150px; /* Fixed height to keep uniformity */
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .option-box p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Selection Box */
+        .selection {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Proceed Button */
+        .proceed-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .proceed-btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .options {
+                flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            }
+            .option-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Welcome to Your Dashboard</h2>
+        <p>Select an option below to proceed:</p>
+
+        <div class="options">
+            <!-- Children Content Altering -->
+            <div class="option-box">
+                <img src="children_content.png" alt="Children Content">
+                <h3>Children Content Altering</h3>
+                <p>Restrict inappropriate content and ads for children under 18. Only verified content is allowed.</p>
+                <select class="selection">
+                    <option value="enable">Enable</option>
+                    <option value="disable">Disable</option>
+                </select>
+            </div>
+
+            <!-- Spam and Cybertheft Security -->
+            <div class="option-box">
+                <img src="spam_security.png" alt="Spam Security">
+                <h3>Spam & Cybertheft Security</h3>
+                <p>Automatically block spam calls, prevent OTP fraud, and report numbers to cybercrime authorities.</p>
+                <select class="selection">
+                    <option value="enable">Enable</option>
+                    <option value="disable">Disable</option>
+                </select>
+            </div>
+        </div>
+
+        <a href="login.html" class="proceed-btn">Proceed</a>
+    </div>
+
+</body>
+</html>

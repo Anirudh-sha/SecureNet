@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activate Free Trial</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        /* Container Box */
+        .redeem-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+            max-width: 90%;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Activate Button */
+        .activate-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .activate-btn:hover {
+            background-color: #e04d2c;
+            transform: translateY(-3px);
+        }
+
+        /* Success Message */
+        .message {
+            margin-top: 15px;
+            font-size: 14px;
+            color: green;
+            display: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="redeem-container">
+        <h2>Activate Your Free Trial</h2>
+        <p>Enjoy all premium features for **15 days** at no cost. Click the button below to start!</p>
+
+        <button class="activate-btn" onclick="activateTrial()">Activate 15-Day Trial</button>
+
+        <p class="message" id="success-message">✅ Your free trial has been activated successfully!</p>
+    </div>
+
+    <script>
+        function activateTrial() {
+            document.getElementById("success-message").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
